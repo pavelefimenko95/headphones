@@ -1,1 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @import '../../node_modules/normalize.scss/normalize.scss';
+@import './common/variables';
+
+@import './partials/NavBar';
+
+body {
+  background-color: #000;
+  font-family: $main-font;
+}
+
+.main {
+  margin-left: 209px;
+}
