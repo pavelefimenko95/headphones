@@ -1,0 +1,1 @@
+export const MOUSE_PAGE_ROUTE = '/mouse-items';
