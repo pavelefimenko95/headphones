@@ -1,0 +1,16 @@
+.page-headline {
+  height: 160px;
+  display: flex;
+
+  &__title {
+    display: flex;
+    align-items: center;
+
+    h1 {
+      text-transform: uppercase;
+      margin: 0 20px;
+      font-size: 52px;
+      color: $highlight-color;
+    }
+  }
+}

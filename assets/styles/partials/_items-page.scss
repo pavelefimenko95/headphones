@@ -1,0 +1,14 @@
+.items-page {
+  &__items-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__item {
+      border-top: 1px solid $border-color;
+      border-right: 1px solid $border-color;
+      width: 25%;
+      height: 300px;
+    }
+  }
+}

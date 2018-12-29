@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react';
-import Navbar from './components/common/Navbar';
+import Header from './components/common/Header';
 import IndexRouter from './routes';
 
 export default class App extends Component {
     render() {
         return (
             <Fragment>
-                <Navbar />
+                <Header />
                 <IndexRouter />
             </Fragment>
         );

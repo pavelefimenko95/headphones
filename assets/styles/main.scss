@@ -1,14 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @import '../../node_modules/normalize.scss/normalize.scss';
 @import './common/variables';
+@import './common/library';
 
 @import './partials/NavBar';
+@import './partials/items-page';
 
 body {
   background-color: #000;
   font-family: $main-font;
 }
 
+#app {
+  display: flex;
+}
+
 .main {
-  margin-left: 209px;
+  width: 97vw;
+  margin-left: 81px;
+  position: relative;
+  transition: all .5s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .0;
+    transition: all .3s ease;
+  }
 }
