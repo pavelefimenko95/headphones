@@ -29,6 +29,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-cookies": "^0.1.0",
+    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.6.3",
     "react-icons": "^3.2.2",
     "react-loader-spinner": "^2.2.0",

@@ -1,13 +1,16 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import ItemsPage from '../components/ItemsPage';
-import * as pagesConstants from '../constants/pages';
+import ItemPage from '../components/ItemPage';
 
 export default () =>
     <div className="main">
         <Switch>
-            <Route path={`${ pagesConstants.MOUSE_PAGE_ROUTE }`} component={ ItemsPage } />
-            <Route path={`${ pagesConstants.KEYBOARD_PAGE_ROUTE }`} component={ ItemsPage } />
-            <Route path={`${ pagesConstants.HEADPHONES_PAGE_ROUTE }`} component={ ItemsPage } />
+            <Route exact path="/products/:itemType" component={ ItemsPage } />
+            <Route path="/products/:itemType/:id" component={ ItemPage } />
+            <Route exact path="/products/:itemType" component={ ItemsPage } />
+            <Route path="/products/:itemType/:id" component={ ItemPage } />
+            <Route exact path="/products/:itemType" component={ ItemsPage } />
+            <Route path="/products/:itemType/:id" component={ ItemPage } />
         </Switch>
     </div>

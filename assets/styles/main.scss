@@ -5,8 +5,12 @@
 
 @import './partials/NavBar';
 @import './partials/items-page';
+@import './partials/item-page';
 
 @import './UI/item-preview';
+@import './UI/ItemsScrollModule/items-scroll-module';
+@import './UI/ItemsScrollModule/item-preview-scroll';
+@import './UI/scrollbar/scrollbar-thumb';
 
 body {
   background-color: #000;

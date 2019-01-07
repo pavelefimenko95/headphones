@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes  from 'prop-types';
 
-export default class ItemPreview extends Component {
+class ItemPreview extends Component {
     render() {
-        let { image, name, description } = this.props.product;
+        let { location, product: { id, image, name, description }} = this.props;
         return (
-            <div className="item-preview">
+            <Link to={ `${ location && location.pathname }/${ id }` } className="item-preview">
                 <div className="item-preview__image">
                     <img src={ __INTERNAL_API_URL__ + image } alt="alt"/>
                 </div>
@@ -16,7 +18,13 @@ export default class ItemPreview extends Component {
                         <p>{ description }</p>
                     </div>
                 </div>
-            </div>
+            </Link>
         );
     }
 }
+
+ItemPreview.propTypes = {
+    product: PropTypes.object
+};
+
+export default ItemPreview;
