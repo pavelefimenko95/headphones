@@ -22,22 +22,22 @@ class Header extends Component {
                             <span>мыши</span>
                         </div>
                     </NavLink>
-                    <div className="header__menu__item">
+                    <NavLink to={ pagesConstants.KEYBOARD_PAGE_ROUTE } className="header__menu__item">
                         <div className="header__menu__item__icon">
                             <ReactSVG svgClassName="header__menu__item__icon__svg" src="../../../assets/images/keyboard.svg" />
                         </div>
                         <div className="header__menu__item__title">
                             <span>клавиатуры</span>
                         </div>
-                    </div>
-                    <div className="header__menu__item">
+                    </NavLink>
+                    <NavLink to={ pagesConstants.HEADPHONES_PAGE_ROUTE } className="header__menu__item">
                         <div className="header__menu__item__icon">
                             <ReactSVG svgClassName="header__menu__item__icon__svg" src="../../../assets/images/headphones-icon.svg" />
                         </div>
                         <div className="header__menu__item__title">
                             <span>наушники</span>
                         </div>
-                    </div>
+                    </NavLink>
                     <div className="header__menu__item">
                         <div className="header__menu__item__icon">
                             <ReactSVG svgClassName="header__menu__item__icon__svg" src="../../../assets/images/plus-icon.svg" />

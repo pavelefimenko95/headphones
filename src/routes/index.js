@@ -7,5 +7,7 @@ export default () =>
     <div className="main">
         <Switch>
             <Route path={`${ pagesConstants.MOUSE_PAGE_ROUTE }`} component={ ItemsPage } />
+            <Route path={`${ pagesConstants.KEYBOARD_PAGE_ROUTE }`} component={ ItemsPage } />
+            <Route path={`${ pagesConstants.HEADPHONES_PAGE_ROUTE }`} component={ ItemsPage } />
         </Switch>
     </div>
