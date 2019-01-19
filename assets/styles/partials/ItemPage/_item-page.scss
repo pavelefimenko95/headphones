@@ -1,0 +1,21 @@
+.item-page {
+  display: flex;
+
+  &__scroll-module {
+    position: fixed;
+    z-index: 1;
+    width: 173px;
+    height: 100vh;
+  }
+
+  &__main {
+    margin-left: 173px;
+    width: calc(100% - 173px);
+    height: 2000px;
+    position: relative;
+
+    &__content {
+
+    }
+  }
+}

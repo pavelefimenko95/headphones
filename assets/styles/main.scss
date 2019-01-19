@@ -5,7 +5,9 @@
 
 @import './partials/NavBar';
 @import './partials/items-page';
-@import './partials/item-page';
+@import 'partials/ItemPage/item-page';
+@import 'partials/ItemPage/item-page-header';
+@import 'partials/ItemPage/item-page-landing';
 
 @import './UI/item-preview';
 @import './UI/ItemsScrollModule/items-scroll-module';

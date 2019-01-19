@@ -1,0 +1,19 @@
+.item-page-landing {
+  position: relative;
+
+  &__description {
+    position: absolute;
+    width: 300px;
+    left: 50px;
+    top: 110px;
+    font-size: 52px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__image {
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -17,6 +17,10 @@
         opacity: .5;
       }
     }
+
+    .item-page__scroll-module {
+      transform: translateX(128px);
+    }
   }
 
   &__logo-container {
