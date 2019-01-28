@@ -1,0 +1,25 @@
+.item-page-buy {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  height: 100px;
+  width: 330px;
+  z-index: 1;
+  background: $main-grey-color--transparent;
+  border-top: 3px solid $highlight-color--transparent;
+
+  &__controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    
+    &__price {
+      font-size: 22px;
+      color: #fff;
+      font-weight: normal;
+    }
+  }
+}

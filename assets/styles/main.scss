@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 @import '../../node_modules/normalize.scss/normalize.scss';
 @import './common/variables';
 @import './common/library';
@@ -10,21 +10,26 @@
 @import './partials/ItemPage/item-page-header';
 @import './partials/ItemPage/item-page-landing';
 @import './partials/ItemPage/item-page-specs';
+@import './partials/ItemPage/item-page-buy';
 
 @import './UI/item-preview';
 @import './UI/ItemsScrollModule/items-scroll-module';
 @import './UI/ItemsScrollModule/item-preview-scroll';
 @import './UI/scrollbar/scrollbar-thumb';
 @import './UI/gallery';
+@import './UI/Cart/cart-controls';
+@import './UI/Cart/cart-modal';
 
 body {
   background-color: #000;
-  font-family: $main-font;
 }
 
 body * {
   box-sizing: border-box;
-  font-family: $main-font;
+  font-family: $main-font!important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: .05em;
 }
 
 h1, h2, h3, h4, h5, p, ul, li {

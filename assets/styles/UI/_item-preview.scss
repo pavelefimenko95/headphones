@@ -3,10 +3,9 @@
   border-bottom: 1px solid $main-grey-color;
   border-right: 1px solid $main-grey-color;
   width: 25%;
-  height: 300px;
-  padding: 10px 0;
-  cursor: pointer;
+  padding: 10px 0 55px;
   transition: opacity .6s ease;
+  user-select: none;
 
   &::after {
     content: '';
@@ -25,6 +24,7 @@
   }
 
   &__image {
+    cursor: pointer;
     text-align: center;
 
     img {
@@ -48,6 +48,25 @@
         text-transform: uppercase;
         font-size: 16px;
       }
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15px;
+    
+    &__price {
+      color: #fff;
+      font-size: 20px;
+    }
+
+    &__button {
+      cursor: pointer;
     }
   }
 
