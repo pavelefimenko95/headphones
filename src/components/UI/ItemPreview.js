@@ -3,13 +3,6 @@ import { Link } from 'react-router-dom';
 import PropTypes  from 'prop-types';
 import Transition from 'react-transition-group/Transition';
 
-// const transitionStyles = {
-//     entering: { opacity: 0 },
-//     entered:  { opacity: 1 },
-//     exiting:  { opacity: 1 },
-//     exited:  { opacity: 0 },
-// };
-
 class ItemPreview extends Component {
     constructor(props) {
         super(props);

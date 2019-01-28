@@ -1,5 +1,9 @@
 .item-page-landing {
   position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
   &__description {
     position: absolute;

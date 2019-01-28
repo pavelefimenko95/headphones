@@ -4,7 +4,7 @@ class Footer extends Component {
     render() {
         return (
             <div className="footer">
-                Footer
+                All Rights Reserved Powered by:www.game-stuff.com.ua
             </div>
         );
     }

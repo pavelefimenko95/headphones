@@ -4,15 +4,18 @@
 @import './common/library';
 
 @import './partials/NavBar';
+@import './partials/Footer';
 @import './partials/items-page';
-@import 'partials/ItemPage/item-page';
-@import 'partials/ItemPage/item-page-header';
-@import 'partials/ItemPage/item-page-landing';
+@import './partials/ItemPage/item-page';
+@import './partials/ItemPage/item-page-header';
+@import './partials/ItemPage/item-page-landing';
+@import './partials/ItemPage/item-page-specs';
 
 @import './UI/item-preview';
 @import './UI/ItemsScrollModule/items-scroll-module';
 @import './UI/ItemsScrollModule/item-preview-scroll';
 @import './UI/scrollbar/scrollbar-thumb';
+@import './UI/gallery';
 
 body {
   background-color: #000;
@@ -49,6 +52,6 @@ h1, h2, h3, h4, h5, p, ul, li {
     background-color: #000;
     opacity: .0;
     z-index: -1;
-    transition: all .4s ease;
+    transition: all .5s ease;
   }
 }

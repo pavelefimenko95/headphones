@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import ItemPreview from '../UI/ItemPreview';
 import { loadProducts } from '../../actions/products';
 import renderPageContext from '../../utils/renderPageContext';
+import Footer from '../common/footer';
 
 class ItemsPage extends Component {
     render() {
@@ -25,6 +26,7 @@ class ItemsPage extends Component {
                             .map((product, i) => <ItemPreview key={i} product={ product } location={ location }/>)
                     }
                 </div>
+                <Footer />
             </div>
         );
     }
@@ -32,8 +34,6 @@ class ItemsPage extends Component {
     componentDidMount() {
         this.props.actions.loadProducts();
     }
-
-
 }
 
 const mapStateToProps = state => ({

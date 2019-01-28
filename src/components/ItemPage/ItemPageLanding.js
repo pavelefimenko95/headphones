@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 class ItemPageLanding extends Component {
     render() {
-        let { description, landingImage } = this.props;
+        let { description, landingImage, setRef } = this.props;
 
         return (
-            <div className="item-page-landing">
+            <div className="item-page-landing" ref={ el => setRef(el, 'landingRef') }>
                 <div className="item-page-landing__description">
                     <h1>{ description }</h1>
                 </div>

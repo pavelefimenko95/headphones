@@ -2,7 +2,7 @@
   position: relative;
   height: 50px;
   width: 8px;
-  background-color: $border-color;
+  background-color: $main-grey-color;
   cursor: pointer;
 
   &::before {
@@ -14,7 +14,7 @@
     height: 0;
     border-style: solid;
     border-width: 0 0 8px 8px;
-    border-color: transparent transparent $border-color transparent;
+    border-color: transparent transparent $main-grey-color transparent;
   }
 
   &::after {
@@ -26,6 +26,6 @@
     height: 0;
     border-style: solid;
     border-width: 0 8px 8px 0;
-    border-color: transparent $border-color transparent transparent;
+    border-color: transparent $main-grey-color transparent transparent;
   }
 }

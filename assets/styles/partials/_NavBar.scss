@@ -2,6 +2,7 @@
   position: fixed;
   height: 100vh;
   font-family: $main-font;
+  z-index: 1;
 
   &:hover {
     .header__menu__item__title {
@@ -10,16 +11,27 @@
     }
 
     & + .main {
-      transform: translateX(128px);
+      .items-page {
+        transform: translateX(128px);
+      }
+
+      .item-page {
+        transform: translateX(128px);
+      }
+
+      .item-page-header {
+        transform: translateX(128px);
+      }
+
+      .item-page-scroll-module-wrapper {
+        transform: translateX(128px);
+      }
 
       &::after {
-        z-index: 1;
+        transform: translateX(128px);
+        z-index: 5;
         opacity: .5;
       }
-    }
-
-    .item-page__scroll-module {
-      transform: translateX(128px);
     }
   }
 
@@ -75,7 +87,7 @@
   &__menu {
     background-color: #202022;
     height: 100%;
-    border-top: 1px solid $border-color;
+    border-top: 1px solid $main-grey-color;
 
     &__item {
       position: relative;
@@ -139,7 +151,7 @@
         }
 
         &--circle {
-          color: $icons-color;
+          color: $main-light-grey-color;
           transition: color 0.2s ease;
         }
       }
@@ -170,7 +182,7 @@
 
     &__separator {
       height: 1px;
-      background-color: darken($icons-color, 25%);
+      background-color: darken($main-light-grey-color, 25%);
     }
   }
 }
