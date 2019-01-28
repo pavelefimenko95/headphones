@@ -6,6 +6,7 @@
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, .7);
+  user-select: none;
 
   &__content {
     display: flex;
@@ -27,6 +28,7 @@
       justify-content: center;
       background: $main-grey-color;
       padding: 15px 0;
+      //border-radius: 5px;
 
       &__title {
         font-size: 30px;
@@ -36,7 +38,15 @@
 
       &__close {
         position: absolute;
-        right: 10px;
+        right: 15px;
+        color: #fff;
+        opacity: .7;
+        transition: opacity .3s ease;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+        }
       }
     }
 
@@ -44,9 +54,20 @@
       width: 100%;
 
       &__row {
+        position: relative;
         display: flex;
         background: $main-grey-color;
         margin-top: 2px;
+        padding: 5px;
+        //border-radius: 5px;
+
+        &--empty {
+          display: flex;
+          justify-content: center;
+          font-size: 18px;
+          padding: 40px 0;
+          color: #fff;
+        }
 
         &__image-cell {
           width: 30%;
@@ -60,16 +81,20 @@
         &__description-cell {
           display: flex;
           flex-wrap: wrap;
+          flex-direction: column;
+          align-items: flex-start;
           width: 30%;
 
           &__title {
             width: 100%;
-            font-size: 20px;
-            color: #fff;
+            font-size: 25px;
+            color: $highlight-color;
+            margin: 25px 0;
           }
 
           &__description {
-            width: 100%;
+            text-transform: capitalize;
+            width: 50%;
             font-size: 18px;
             color: #fff;
           }
@@ -78,17 +103,50 @@
         &__quantity-cell {
           display: flex;
           justify-content: center;
+          align-items: center;
           width: 20%;
           font-size: 18px;
           color: #fff;
+
+          &__icon {
+            cursor: pointer;
+          }
+
+          input {
+            margin: 0 10px;
+            color: #fff;
+            width: 40px;
+            height: 30px;
+            font-size: 20px;
+            padding-left: 15px;
+            background-color: $main-light-grey-color;
+            border-radius: 5px;
+            box-shadow: inset 0 0 3px $main-grey-color;
+            border: none;
+          }
         }
 
         &__price-cell {
           display: flex;
           justify-content: center;
+          align-items: center;
           width: 20%;
           font-size: 18px;
           color: #fff;
+        }
+
+        &__delete {
+          position: absolute;
+          right: 15px;
+          top: 15px;
+          color: #fff;
+          opacity: .7;
+          transition: opacity .3s ease;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 1;
+          }
         }
       }
     }
