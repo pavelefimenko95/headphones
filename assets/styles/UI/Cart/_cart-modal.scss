@@ -5,8 +5,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, .75);
   user-select: none;
+  overflow-y: auto;
 
   &__content {
     display: flex;
@@ -94,7 +95,7 @@
 
           &__description {
             text-transform: capitalize;
-            width: 50%;
+            width: 80%;
             font-size: 18px;
             color: #fff;
           }
@@ -131,7 +132,7 @@
           justify-content: center;
           align-items: center;
           width: 20%;
-          font-size: 18px;
+          font-size: 19px;
           color: #fff;
         }
 
@@ -148,6 +149,30 @@
             opacity: 1;
           }
         }
+      }
+    }
+
+    &__footer {
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      background: $main-grey-color;
+      padding: 15px 30px 20px;
+      margin-top: 2px;
+
+      &__total-price {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        color: #fff;
+        font-size: 18px;
+        margin: 15px 0 25px;
+      }
+
+      .button {
+        margin: 0 10px;
       }
     }
   }

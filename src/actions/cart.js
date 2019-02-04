@@ -1,3 +1,4 @@
+import axios from 'axios';
 import * as cartActionConstants from '../constants/actions/cart';
 
 export const addCartProduct = data => dispatch => {
@@ -31,4 +32,17 @@ export const closeCartModal = () => dispatch => {
     dispatch({
         type: cartActionConstants.CLOSE_CART_MODAL
     });
+};
+
+export const submitCart = (data, push) => async dispatch => {
+    try {
+        let response = await axios.post('/database/create/cart-info', data);
+        dispatch({
+            type: cartActionConstants.SUBMIT_CART
+        });
+
+        push(`/order/${ response.data.cartInfoId }`);
+    } catch(e) {
+        console.log(e);
+    }
 };

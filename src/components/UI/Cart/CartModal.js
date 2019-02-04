@@ -1,15 +1,23 @@
 import React, { Component, Fragment } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import Modal from 'react-modal';
 import { FaTimes, FaPlus, FaMinus } from 'react-icons/fa';
-import { closeCartModal, deleteCartProduct, updateCartProduct } from '../../../actions/cart';
+import { closeCartModal, deleteCartProduct, updateCartProduct, submitCart } from '../../../actions/cart';
 import { loadProducts } from '../../../actions/products';
 
 Modal.setAppElement('#app');
 
 class CartModal extends Component {
+    constructor(props) {
+        super(props);
+
+        this.submitCart = this.submitCart.bind(this);
+    }
+
     render() {
         let { cart, products, actions } = this.props;
 
@@ -17,6 +25,11 @@ class CartModal extends Component {
             ...cartProduct,
             ...products.productsList.find(product => product.id === cartProduct.id)
         }));
+
+        let totalPrice = extendedCartProductsList.reduce((prev, next) =>
+            (prev.price ? prev.price * prev.quantity : prev) +
+            (next.price ? next.price * next.quantity : next)
+            , 0);
 
         return (
             <Fragment>
@@ -97,13 +110,39 @@ class CartModal extends Component {
                                 )) : <div className="cart-modal__content__table__row cart-modal__content__table__row--empty">Товары не выбраны</div>
                         }
                     </div>
+                    <div className={ classNames('cart-modal__content__footer', {'hidden': !cart.cartProductsList.length}) }>
+                        <div className="cart-modal__content__footer__total-price">
+                            Всего: &nbsp;
+                            { totalPrice }
+                            грн
+                        </div>
+                        <div className="cart-modal__content__footer__continue">
+                            <div className="button" onClick={ actions.closeCartModal }>
+                                Продолжить покупки
+                            </div>
+                        </div>
+                        <div className="cart-modal__content__footer__submit">
+                            <div className="button button--red" onClick={ () => this.submitCart(totalPrice) }>
+                                Оформить заказ
+                            </div>
+                        </div>
+                    </div>
                 </Modal>
             </Fragment>
         );
     }
 
-    componendividMount() {
+    componentDidMount() {
         this.props.actions.loadProducts();
+    }
+
+    submitCart(totalPrice) {
+        let { cart, actions, history } = this.props;
+
+        actions.submitCart({
+            cartProductsList: cart.cartProductsList,
+            totalPrice
+        }, history.push);
     }
 }
 
@@ -117,7 +156,8 @@ const mapDispatchToProps = dispatch => ({
         closeCartModal,
         loadProducts,
         deleteCartProduct,
-        updateCartProduct
+        updateCartProduct,
+        submitCart
     }, dispatch)
 });
 
@@ -125,5 +165,5 @@ CartModal.propTypes = {
     cart: PropTypes.object
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CartModal);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartModal));
 

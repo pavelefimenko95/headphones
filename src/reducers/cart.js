@@ -32,6 +32,8 @@ export default (state = initialState, action) => {
                 ...state,
                 isCartModalOpened: false
             };
+        case cartActionConstants.SUBMIT_CART:
+            return initialState;
         default:
             return state;
     }
