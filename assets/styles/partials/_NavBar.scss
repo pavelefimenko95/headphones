@@ -27,6 +27,14 @@
         transform: translateX(128px);
       }
 
+      .order-page {
+        transform: translateX(128px);
+      }
+
+      .order-success-page {
+        transform: translateX(128px);
+      }
+
       &::after {
         transform: translateX(128px);
         z-index: 5;
@@ -60,7 +68,7 @@
 
       .header__logo-container__img {
           * {
-            fill: #fff;
+            fill: $main-white-color;
           }
       }
     }
@@ -121,12 +129,12 @@
 
         .header__menu__item__icon {
           &--circle {
-            color: #fff;
+            color: $main-white-color;
           }
 
           &__svg {
             * {
-              fill: #fff;
+              fill: $main-white-color;
             }
           }
         }
@@ -168,7 +176,7 @@
         font-size: 14px;
         text-transform: uppercase;
         font-weight: bold;
-        color: #fff;
+        color: $main-white-color;
         z-index: 1;
         opacity: 0;
 
