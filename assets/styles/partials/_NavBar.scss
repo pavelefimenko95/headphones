@@ -148,7 +148,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 81px;
+        width: $header-width;
         z-index: 1;
 
         &__svg {
@@ -191,6 +191,18 @@
     &__separator {
       height: 1px;
       background-color: darken($main-light-grey-color, 25%);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .header {
+    &__menu {
+      &__item {
+        &__icon {
+          width: $header-width-mobile;
+        }
+      }
     }
   }
 }

@@ -107,3 +107,28 @@
     }
   }
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .page-headline {
+    &__title {
+      h1 {
+        font-size: 42px;
+      }
+    }
+  }
+
+  .form-control {
+    &__field {
+      flex-wrap: wrap;
+      margin: 20px 0;
+
+      &__label {
+        width: 100%;
+      }
+
+      &__input {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import randomNumber from 'random-number';
+import _ from 'lodash';
 import OrderPageForm from '../forms/OrderPageForm';
 import { loadCities } from '../../actions/cities';
 import { loadPostOffices } from '../../actions/postOffices';
@@ -48,10 +49,12 @@ class OrderPage extends Component {
     }
 
     onOrderPageFormSubmit(formData) {
-        let { match, history } = this.props;
+        let { cities, postOffices, match, history } = this.props;
 
         this.props.actions.createOrder({
             ...formData,
+            city: _.get(cities.citiesList.find(city => city.Ref === formData.city), 'DescriptionRu', formData.city),
+            postOffice: _.get(postOffices.postOfficesList.find(postOffice => postOffice.Ref === formData.postOffice), 'DescriptionRu', formData.postOffice),
             id: randomNumber({
                 min: 100000000,
                 max: 999999999,

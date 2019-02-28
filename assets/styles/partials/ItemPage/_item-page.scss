@@ -16,3 +16,16 @@
   height: 100vh;
   transition: all .5s ease;
 }
+
+@media (max-width: $breakpoint-tablet) {
+  .item-page {
+    &__main {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
+  .item-page-scroll-module-wrapper {
+    display: none;
+  }
+}

@@ -23,3 +23,10 @@
     }
   }
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .item-page-buy {
+    height: $header-width-mobile;
+    width: calc(100% - #{$header-width-mobile});
+  }
+}

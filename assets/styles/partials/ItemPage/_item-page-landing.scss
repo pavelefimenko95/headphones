@@ -16,8 +16,24 @@
   }
 
   &__image {
-    img {
+    height: 90%;
+    background: no-repeat center center;
+    background-size: cover;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .item-page-landing {
+    height: calc(100vh - #{$header-width-mobile});
+
+    &__description {
       width: 100%;
+      top: 120px;
+      left: 25px;
+
+      h1 {
+        font-size: 30px;
+      }
     }
   }
 }

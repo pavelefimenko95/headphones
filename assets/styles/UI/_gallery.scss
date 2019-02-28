@@ -1,12 +1,13 @@
 .gallery {
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 768px;
 
   &__wrapper {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     &__image {
       width: 70%;
@@ -88,7 +89,6 @@
           padding: 16px;
 
           &__button {
-
             transition: opacity .3s ease;
 
             &--selected {
@@ -99,6 +99,75 @@
               height: 100px;
               width: 100px;
               cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .gallery {
+    &__wrapper {
+      &__image {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &__controls {
+        width: 100%;
+
+        &__color {
+          display: none;
+          //margin: 0 auto 30px;
+
+          &__title {
+            h1 {
+              //display: none;
+            }
+          }
+        }
+
+        &__views {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          margin-top: 10px;
+
+          &__title {
+            h1 {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .gallery {
+    height: 500px;
+
+    &__wrapper {
+      &__controls {
+        &__color {
+
+        }
+
+        &__views {
+          &__buttons {
+            padding: 10px 10px 6px;
+
+            &__button {
+              img {
+                width: 60px;
+                height: 60px;
+              }
             }
           }
         }

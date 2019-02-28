@@ -56,3 +56,15 @@
     }
   }
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .item-page-header {
+    &__title {
+      margin-left: 25px;
+    }
+
+    &__menu {
+      display: none;
+    }
+  }
+}

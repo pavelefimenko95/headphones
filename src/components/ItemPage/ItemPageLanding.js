@@ -10,8 +10,7 @@ class ItemPageLanding extends Component {
                 <div className="item-page-landing__description">
                     <h1>{ description }</h1>
                 </div>
-                <div className="item-page-landing__image">
-                    <img src={ __INTERNAL_API_URL__ + landingImage } alt="alt"/>
+                <div className="item-page-landing__image" style={{backgroundImage: `url(${__INTERNAL_API_URL__ + landingImage})`}}>
                 </div>
             </div>
         );

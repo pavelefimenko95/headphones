@@ -86,3 +86,15 @@
     opacity: 0;
   }
 }
+
+@media (max-width: $breakpoint-tablet) {
+  .item-preview {
+    width: 50%;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .item-preview {
+    width: 100%;
+  }
+}

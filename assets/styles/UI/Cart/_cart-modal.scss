@@ -29,7 +29,6 @@
       justify-content: center;
       background: $main-grey-color;
       padding: 15px 0;
-      //border-radius: 5px;
 
       &__title {
         font-size: 30px;
@@ -60,7 +59,6 @@
         background: $main-grey-color;
         margin-top: 2px;
         padding: 5px;
-        //border-radius: 5px;
 
         &--empty {
           display: flex;
@@ -173,6 +171,80 @@
 
       .button {
         margin: 0 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .cart-modal {
+    &__content {
+      width: 90%;
+
+      &__table {
+        &__row {
+          &__description-cell {
+            &__title {
+              margin-top: 10px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .cart-modal {
+    &__content {
+      width: 90%;
+
+      &__table {
+        &__row {
+          flex-wrap: wrap;
+          padding-bottom: 15px;
+
+          &__image-cell {
+            width: 50%;
+          }
+
+          &__description-cell {
+            width: 50%;
+
+            &__title {
+              margin: 8px 0;
+            }
+
+            &__description {
+              font-size: 16px;
+            }
+          }
+
+          &__quantity-cell {
+            width: 50%;
+            margin-top: 15px;
+          }
+
+          &__price-cell {
+            width: 50%;
+            margin-top: 15px;
+          }
+        }
+      }
+
+      &__footer {
+        justify-content: center;
+        padding-bottom: 13px;
+
+        &__total-price {
+          margin-bottom: 32px;
+        }
+
+        &__continue {
+          order: 1;
+          margin-top: 13px;
+        }
       }
     }
   }
