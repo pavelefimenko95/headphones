@@ -50,7 +50,7 @@ module.exports = {
             template: './src/index.html'
         }),
         new ExtendedDefineWebpackPlugin({
-            __INTERNAL_API_URL__: process.env.INTERNAL_API_URL || 'http://localhost:5000'
+            __INTERNAL_API_URL__: process.env.INTERNAL_API_URL || 'http://localhost:7000'
         }),
         new CopyWebpackPlugin([
             {from: 'assets/images', to: 'assets/images'}
@@ -58,6 +58,9 @@ module.exports = {
     ],
     devtool: 'source-map',
     devServer: {
-        port: process.env.PORT || 4000
+        port: process.env.PORT || 4000,
+        historyApiFallback: true,
+        contentBase: './',
+        hot: true
     }
 };

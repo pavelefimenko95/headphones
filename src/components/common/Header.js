@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaCircle } from "react-icons/fa";
 import ReactSVG from 'react-svg';
-import * as pagesConstants from '../../constants/pages';
+import * as productConstants from '../../constants/product';
 
 class Header extends Component {
     render() {
@@ -14,7 +14,7 @@ class Header extends Component {
                     </div>
                 </div>
                 <div className="header__menu">
-                    <NavLink to={ pagesConstants.MOUSE_PAGE_ROUTE } className="header__menu__item">
+                    <NavLink to={`/products/${ productConstants.MOUSE.toLowerCase() }`} className="header__menu__item">
                         <div className="header__menu__item__icon">
                             <ReactSVG svgClassName="header__menu__item__icon__svg" src="../../../assets/images/mouse-icon.svg" />
                         </div>
@@ -22,22 +22,22 @@ class Header extends Component {
                             <span>мыши</span>
                         </div>
                     </NavLink>
-                    <div className="header__menu__item">
+                    <NavLink to={`/products/${ productConstants.KEYBOARD.toLowerCase() }`} className="header__menu__item">
                         <div className="header__menu__item__icon">
                             <ReactSVG svgClassName="header__menu__item__icon__svg" src="../../../assets/images/keyboard.svg" />
                         </div>
                         <div className="header__menu__item__title">
                             <span>клавиатуры</span>
                         </div>
-                    </div>
-                    <div className="header__menu__item">
+                    </NavLink>
+                    <NavLink to={`/products/${ productConstants.HEADPHONES.toLowerCase() }`}  className="header__menu__item">
                         <div className="header__menu__item__icon">
                             <ReactSVG svgClassName="header__menu__item__icon__svg" src="../../../assets/images/headphones-icon.svg" />
                         </div>
                         <div className="header__menu__item__title">
                             <span>наушники</span>
                         </div>
-                    </div>
+                    </NavLink>
                     <div className="header__menu__item">
                         <div className="header__menu__item__icon">
                             <ReactSVG svgClassName="header__menu__item__icon__svg" src="../../../assets/images/plus-icon.svg" />

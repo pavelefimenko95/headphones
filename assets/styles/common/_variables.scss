@@ -1,4 +1,13 @@
-$main-font: 'Lato', sans-serif;
-$icons-color: #73737C;
+$main-font: 'Roboto', sans-serif;
+$main-light-grey-color: #73737C;
+$main-grey-color: #252529;
+$main-grey-color--transparent: rgba(37, 37, 41, .8);
 $highlight-color: #FF0013;
-$border-color: #252529;
+$highlight-color--transparent: rgba(255, 0, 19, .8);
+$main-white-color: #fff;
+
+$header-width: 81px;
+$header-width-mobile: 68px;
+
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 550px;

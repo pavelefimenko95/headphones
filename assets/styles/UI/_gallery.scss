@@ -1,0 +1,177 @@
+.gallery {
+  display: flex;
+  align-items: center;
+  height: 768px;
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__image {
+      width: 70%;
+      text-align: center;
+      transition: opacity 0.5s ease-in-out;
+
+      &--entering {
+        opacity: 0;
+      }
+
+      &--entered {
+        opacity: 1;
+      }
+
+      &--exiting {
+        opacity: 1;
+      }
+
+      &--exited {
+        opacity: 0;
+      }
+
+      img {
+        width: 75%;
+      }
+    }
+
+    &__controls {
+      width: 30%;
+
+      &__color {
+        width: 237px;
+        margin-bottom: 30px;
+
+        &__title {
+          h1 {
+            font-size: 35px;
+            color: $main-light-grey-color;
+            text-transform: uppercase;
+          }
+        }
+
+        &__buttons {
+          display: flex;
+          justify-content: space-between;
+          background-color: $main-grey-color;
+          padding: 15px 16px;
+
+          &__button {
+            position: relative;
+            top: 2px;
+            cursor: pointer;
+
+            img {
+              cursor: pointer;
+              height: 49px;
+              width: 49px;
+            }
+          }
+        }
+      }
+
+      &__views {
+        width: 237px;
+
+        &__title {
+          h1 {
+            font-size: 35px;
+            color: $main-light-grey-color;
+            text-transform: uppercase;
+          }
+        }
+
+        &__buttons {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          background-color: $main-grey-color;
+          padding: 16px;
+
+          &__button {
+            transition: opacity .3s ease;
+
+            &--selected {
+              opacity: .5;
+            }
+
+            img {
+              height: 100px;
+              width: 100px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .gallery {
+    &__wrapper {
+      &__image {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &__controls {
+        width: 100%;
+
+        &__color {
+          display: none;
+          //margin: 0 auto 30px;
+
+          &__title {
+            h1 {
+              //display: none;
+            }
+          }
+        }
+
+        &__views {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          margin-top: 10px;
+
+          &__title {
+            h1 {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .gallery {
+    height: 500px;
+
+    &__wrapper {
+      &__controls {
+        &__color {
+
+        }
+
+        &__views {
+          &__buttons {
+            padding: 10px 10px 6px;
+
+            &__button {
+              img {
+                width: 60px;
+                height: 60px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

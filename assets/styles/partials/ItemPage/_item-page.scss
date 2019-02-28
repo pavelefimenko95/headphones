@@ -1,0 +1,31 @@
+.item-page {
+  display: flex;
+  transition: all .5s ease;
+
+  &__main {
+    margin-left: 173px;
+    width: calc(100% - 173px);
+    position: relative;
+  }
+}
+
+.item-page-scroll-module-wrapper {
+  position: fixed;
+  z-index: 1;
+  width: 173px;
+  height: 100vh;
+  transition: all .5s ease;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .item-page {
+    &__main {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
+  .item-page-scroll-module-wrapper {
+    display: none;
+  }
+}

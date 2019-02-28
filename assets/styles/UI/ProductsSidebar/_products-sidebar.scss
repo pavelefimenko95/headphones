@@ -1,0 +1,20 @@
+.products-sidebar {
+  height: 100%;
+  color: #fff;
+
+
+  &__items {
+    height: 90%;
+
+    &__wrapper {
+      height: 400px!important;
+    }
+  }
+
+  &__summary {
+    display: flex;
+    height: 10%;
+    font-size: 16px;
+    justify-content: space-between;
+  }
+}

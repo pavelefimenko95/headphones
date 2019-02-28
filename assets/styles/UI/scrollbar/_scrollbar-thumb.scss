@@ -1,0 +1,31 @@
+.scrollbar-thumb {
+  position: relative;
+  height: 50px;
+  width: 8px;
+  background-color: $main-grey-color;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: -8px;
+    left: 0;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 8px 8px;
+    border-color: transparent transparent $main-grey-color transparent;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 8px 0;
+    border-color: transparent $main-grey-color transparent transparent;
+  }
+}

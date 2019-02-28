@@ -1,0 +1,43 @@
+.order-success-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: all .5s ease;
+
+  &__wrapper {
+    width: 600px;
+    padding: 40px;
+    color: #fff;
+
+    h1 {
+      text-align: center;
+      font-size: 25px;
+      font-weight: bold;
+      color: $highlight-color;
+      margin-bottom: 40px;
+    }
+
+    p {
+      font-size: 17px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .order-success-page {
+    &__wrapper {
+      width: 90%;
+      padding: 20px;
+
+      h1 {
+        font-size: 22px;
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}

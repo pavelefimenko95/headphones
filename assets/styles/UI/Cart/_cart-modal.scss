@@ -1,0 +1,252 @@
+.cart-modal {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .75);
+  user-select: none;
+  overflow-y: auto;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+
+    &__header {
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      background: $main-grey-color;
+      padding: 15px 0;
+
+      &__title {
+        font-size: 30px;
+        color: #fff;
+        text-transform: capitalize;
+      }
+
+      &__close {
+        position: absolute;
+        right: 15px;
+        color: #fff;
+        opacity: .7;
+        transition: opacity .3s ease;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__table {
+      width: 100%;
+
+      &__row {
+        position: relative;
+        display: flex;
+        background: $main-grey-color;
+        margin-top: 2px;
+        padding: 5px;
+
+        &--empty {
+          display: flex;
+          justify-content: center;
+          font-size: 18px;
+          padding: 40px 0;
+          color: #fff;
+        }
+
+        &__image-cell {
+          width: 30%;
+          text-align: center;
+
+          img {
+            width: 80%;
+          }
+        }
+
+        &__description-cell {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 30%;
+
+          &__title {
+            width: 100%;
+            font-size: 25px;
+            color: $highlight-color;
+            margin: 25px 0;
+          }
+
+          &__description {
+            text-transform: capitalize;
+            width: 80%;
+            font-size: 18px;
+            color: #fff;
+          }
+        }
+
+        &__quantity-cell {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 20%;
+          font-size: 18px;
+          color: #fff;
+
+          &__icon {
+            cursor: pointer;
+          }
+
+          input {
+            margin: 0 10px;
+            color: #fff;
+            width: 40px;
+            height: 30px;
+            font-size: 20px;
+            padding-left: 15px;
+            background-color: $main-light-grey-color;
+            border-radius: 5px;
+            box-shadow: inset 0 0 3px $main-grey-color;
+            border: none;
+          }
+        }
+
+        &__price-cell {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 20%;
+          font-size: 19px;
+          color: #fff;
+        }
+
+        &__delete {
+          position: absolute;
+          right: 15px;
+          top: 15px;
+          color: #fff;
+          opacity: .7;
+          transition: opacity .3s ease;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &__footer {
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      background: $main-grey-color;
+      padding: 15px 30px 20px;
+      margin-top: 2px;
+
+      &__total-price {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        color: #fff;
+        font-size: 18px;
+        margin: 15px 0 25px;
+      }
+
+      .button {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .cart-modal {
+    &__content {
+      width: 90%;
+
+      &__table {
+        &__row {
+          &__description-cell {
+            &__title {
+              margin-top: 10px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .cart-modal {
+    &__content {
+      width: 90%;
+
+      &__table {
+        &__row {
+          flex-wrap: wrap;
+          padding-bottom: 15px;
+
+          &__image-cell {
+            width: 50%;
+          }
+
+          &__description-cell {
+            width: 50%;
+
+            &__title {
+              margin: 8px 0;
+            }
+
+            &__description {
+              font-size: 16px;
+            }
+          }
+
+          &__quantity-cell {
+            width: 50%;
+            margin-top: 15px;
+          }
+
+          &__price-cell {
+            width: 50%;
+            margin-top: 15px;
+          }
+        }
+      }
+
+      &__footer {
+        justify-content: center;
+        padding-bottom: 13px;
+
+        &__total-price {
+          margin-bottom: 32px;
+        }
+
+        &__continue {
+          order: 1;
+          margin-top: 13px;
+        }
+      }
+    }
+  }
+}
+

@@ -2,6 +2,7 @@
   position: fixed;
   height: 100vh;
   font-family: $main-font;
+  z-index: 1;
 
   &:hover {
     .header__menu__item__title {
@@ -10,10 +11,34 @@
     }
 
     & + .main {
-      transform: translateX(128px);
+      .items-page {
+        transform: translateX(128px);
+      }
+
+      .item-page {
+        transform: translateX(128px);
+      }
+
+      .item-page-header {
+        transform: translateX(128px);
+      }
+
+      .item-page-scroll-module-wrapper {
+        transform: translateX(128px);
+      }
+
+      .order-page {
+        transform: translateX(128px);
+      }
+
+      .order-success-page {
+        transform: translateX(128px);
+      }
 
       &::after {
-        opacity: .4;
+        transform: translateX(128px);
+        z-index: 5;
+        opacity: .5;
       }
     }
   }
@@ -43,7 +68,7 @@
 
       .header__logo-container__img {
           * {
-            fill: #fff;
+            fill: $main-white-color;
           }
       }
     }
@@ -70,7 +95,7 @@
   &__menu {
     background-color: #202022;
     height: 100%;
-    border-top: 1px solid $border-color;
+    border-top: 1px solid $main-grey-color;
 
     &__item {
       position: relative;
@@ -104,12 +129,12 @@
 
         .header__menu__item__icon {
           &--circle {
-            color: #fff;
+            color: $main-white-color;
           }
 
           &__svg {
             * {
-              fill: #fff;
+              fill: $main-white-color;
             }
           }
         }
@@ -123,7 +148,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 81px;
+        width: $header-width;
         z-index: 1;
 
         &__svg {
@@ -134,7 +159,7 @@
         }
 
         &--circle {
-          color: $icons-color;
+          color: $main-light-grey-color;
           transition: color 0.2s ease;
         }
       }
@@ -151,7 +176,7 @@
         font-size: 14px;
         text-transform: uppercase;
         font-weight: bold;
-        color: #fff;
+        color: $main-white-color;
         z-index: 1;
         opacity: 0;
 
@@ -165,7 +190,19 @@
 
     &__separator {
       height: 1px;
-      background-color: darken($icons-color, 25%);
+      background-color: darken($main-light-grey-color, 25%);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .header {
+    &__menu {
+      &__item {
+        &__icon {
+          width: $header-width-mobile;
+        }
+      }
     }
   }
 }

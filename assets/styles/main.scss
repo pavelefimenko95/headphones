@@ -1,14 +1,50 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 @import '../../node_modules/normalize.scss/normalize.scss';
 @import './common/variables';
 @import './common/library';
 
 @import './partials/NavBar';
+@import './partials/Footer';
 @import './partials/items-page';
+@import './partials/ItemPage/item-page';
+@import './partials/ItemPage/item-page-header';
+@import './partials/ItemPage/item-page-landing';
+@import './partials/ItemPage/item-page-specs';
+@import './partials/ItemPage/item-page-buy';
+@import 'partials/OrderPage/order-page';
+@import './partials/order-success-page';
+
+@import './UI/item-preview';
+@import './UI/ItemsScrollModule/items-scroll-module';
+@import './UI/ItemsScrollModule/item-preview-scroll';
+@import './UI/scrollbar/scrollbar-thumb';
+@import './UI/gallery';
+@import './UI/Cart/cart-controls';
+@import './UI/Cart/cart-modal';
+@import './UI/ProductsSidebar/products-sidebar';
+@import './UI/ProductsSidebar/products-sidebar-item';
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 body {
   background-color: #000;
-  font-family: $main-font;
+}
+
+body * {
+  box-sizing: border-box;
+  font-family: $main-font!important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: .05em;
+}
+
+h1, h2, h3, h4, h5, p, ul, li {
+  margin: 0;
+  padding: 0;
 }
 
 #app {
@@ -16,8 +52,8 @@ body {
 }
 
 .main {
-  width: 97vw;
-  margin-left: 81px;
+  width: calc(100vw - #{$header-width-mobile});
+  margin-left: $header-width;
   position: relative;
   transition: all .5s ease;
 
@@ -30,6 +66,13 @@ body {
     height: 100%;
     background-color: #000;
     opacity: .0;
-    transition: all .3s ease;
+    z-index: -1;
+    transition: all .5s ease;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .main {
+    margin-left: $header-width-mobile;
   }
 }
