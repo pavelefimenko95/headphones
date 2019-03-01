@@ -6,7 +6,7 @@ import ItemPreview from '../UI/ItemPreview';
 import { loadProducts } from '../../actions/products';
 import { addCartProduct, openCartModal } from '../../actions/cart';
 import renderPageContext from '../../utils/renderPageContext';
-import Footer from '../common/footer';
+import Footer from '../common/Footer';
 
 class ItemsPage extends Component {
     render() {
