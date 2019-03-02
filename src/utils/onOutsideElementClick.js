@@ -10,5 +10,7 @@ export default (element, callback) => {
     //     document.removeEventListener('click', outsideClickListener)
     // };
 
-    document.addEventListener('click', outsideClickListener)
+    ['click', 'touch'].forEach(function(e) {
+        document.addEventListener(e, outsideClickListener);
+    });
 }
