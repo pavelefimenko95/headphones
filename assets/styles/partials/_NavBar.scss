@@ -42,8 +42,9 @@
 
 
       & > div {
-        width: 70%;
+        width: 50px;
         //max-width: 130px;
+        transition: width .5s ease;
       }
 
       svg {
@@ -141,6 +142,10 @@
 @media (min-width: $breakpoint-mobile) {
   .header {
     &:hover {
+      .header__logo-container__img > div {
+        width: 120px;
+      }
+
       .header__menu__item__title {
         opacity: 1;
         width: 128px;
@@ -205,8 +210,11 @@
 
 @media (max-width: $breakpoint-mobile) {
   .header {
-
     &--opened {
+      .header__logo-container__img > div {
+        width: 120px;
+      }
+
       .header__menu__item__title {
         opacity: 1;
         width: 128px;

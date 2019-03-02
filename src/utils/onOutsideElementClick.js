@@ -10,7 +10,7 @@ export default (element, callback) => {
     //     document.removeEventListener('click', outsideClickListener)
     // };
 
-    ['click', 'touch'].forEach(function(e) {
+    ['click', 'touchstart'].forEach(function(e) {
         document.addEventListener(e, outsideClickListener);
     });
 }
