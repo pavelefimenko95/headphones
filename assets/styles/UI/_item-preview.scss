@@ -19,10 +19,6 @@
     transition: all .3s ease;
   }
 
-  &:hover::after {
-    height: 100%;
-  }
-
   &__image {
     cursor: pointer;
     text-align: center;
@@ -84,6 +80,14 @@
 
   &--exited {
     opacity: 0;
+  }
+}
+
+@media (min-width: $breakpoint-mobile) {
+  .item-preview {
+    &:hover::after {
+      height: 100%;
+    }
   }
 }
 

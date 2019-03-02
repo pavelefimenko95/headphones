@@ -9,6 +9,7 @@
   z-index: 1;
   background: $main-grey-color--transparent;
   border-top: 3px solid $highlight-color--transparent;
+  transition: all .5s ease;
 
   &__controls {
     display: flex;
