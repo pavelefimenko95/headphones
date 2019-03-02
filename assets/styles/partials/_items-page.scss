@@ -3,6 +3,7 @@
 
   &__items-wrapper {
     display: flex;
+    min-height: 75vh;
     flex-direction: row;
     flex-wrap: wrap;
     border-top: 1px solid $main-grey-color;

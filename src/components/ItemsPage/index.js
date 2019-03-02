@@ -7,6 +7,7 @@ import { loadProducts } from '../../actions/products';
 import { addCartProduct, openCartModal } from '../../actions/cart';
 import renderPageContext from '../../utils/renderPageContext';
 import Footer from '../common/Footer';
+import ComingSoon from '../UI/ComingSoon';
 
 class ItemsPage extends Component {
     render() {
@@ -22,16 +23,17 @@ class ItemsPage extends Component {
                 </div>
                 <div className="items-page__items-wrapper">
                     {
-                        this.props.products.productsList
-                            .filter(product => product.type === match.params.itemType.toUpperCase())
-                            .map((product, i) =>
-                                <ItemPreview key={i}
-                                  product={ product }
-                                  location={ location }
-                                  cartProductsList={ cart.cartProductsList }
-                                  addCartProduct={ actions.addCartProduct }
-                                  openCartModal={ actions.openCartModal }
-                                />)
+                        (pageTitle === 'наушники' || pageTitle === 'клавиатуры') ? <ComingSoon /> :
+                            this.props.products.productsList
+                                .filter(product => product.type === match.params.itemType.toUpperCase())
+                                .map((product, i) =>
+                                    <ItemPreview key={i}
+                                                 product={ product }
+                                                 location={ location }
+                                                 cartProductsList={ cart.cartProductsList }
+                                                 addCartProduct={ actions.addCartProduct }
+                                                 openCartModal={ actions.openCartModal }
+                                    />)
                     }
                 </div>
                 <Footer />
