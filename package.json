@@ -31,6 +31,7 @@
     "random-number": "0.0.9",
     "react": "^16.6.3",
     "react-cookies": "^0.1.0",
+    "react-csv": "^1.1.1",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.6.3",
     "react-icons": "^3.2.2",

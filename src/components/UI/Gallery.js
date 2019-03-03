@@ -100,8 +100,8 @@ class Gallery extends Component {
         });
     }
 
-    static getDerivedStateFromProps(nextProps, prevState) {
-        if(nextProps.galleriesList.length && !prevState.selectedGalleryId) {
+    static getDerivedStateFromProps(nextProps) {
+        if(nextProps.galleriesList.length) {
             return {
                 selectedGalleryId: nextProps.galleriesList[0].id
             };
