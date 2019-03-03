@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import { FaDownload } from 'react-icons/fa';
-import { CSVLink, CSVDownload } from "react-csv";
+import { CSVLink } from "react-csv";
 
 class ItemPageSpecs extends Component {
     render() {
