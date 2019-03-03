@@ -10,8 +10,8 @@ import { openCartModal } from '../../../actions/cart';
 class CartControls extends Component {
     render() {
         let { cart, actions } = this.props;
-        console.log(this);
         let isShow = this.props.location.pathname.indexOf('order') === -1;
+
         return (
             <div className={classNames('cart-controls', {'hidden': !isShow})} onClick={ actions.openCartModal }>
                 <div className="cart-controls__icons-wrapper">

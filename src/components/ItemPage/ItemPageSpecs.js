@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import { FaDownload } from 'react-icons/fa';
+import { CSVLink, CSVDownload } from "react-csv";
 
 class ItemPageSpecs extends Component {
     render() {
         let { specs, setRef } = this.props;
 
+        let csvData = specs ? specs.map(item => [item]) : [];
         return (
             <div className="item-page-specs" ref={ el => setRef(el, 'specsRef') }>
                 <div className="item-page-specs__wrapper">
@@ -23,14 +25,14 @@ class ItemPageSpecs extends Component {
                     </div>
                     <div className="item-page-specs__wrapper__download">
                         <div className="item-page-specs__wrapper__download__title">скачать по</div>
-                        <div className="item-page-specs__wrapper__download__btn">
+                        <CSVLink data={ csvData } filename="Technospot_product_specifications.csv" className="item-page-specs__wrapper__download__btn">
                             <div className="item-page-specs__wrapper__download__btn__icon">
                                 <FaDownload size={ 30 } />
                             </div>
                             <div className="item-page-specs__wrapper__download__btn__text">
                                 скачать
                             </div>
-                        </div>
+                        </CSVLink>
                     </div>
                 </div>
             </div>
