@@ -50,7 +50,7 @@ module.exports = {
             template: './src/index.html'
         }),
         new ExtendedDefineWebpackPlugin({
-            __INTERNAL_API_URL__: process.env.INTERNAL_API_URL || 'http://localhost:7000'
+            __INTERNAL_API_URL__: process.env.INTERNAL_API_URL || 'http://localhost:7500'
         }),
         new CopyWebpackPlugin([
             {from: 'assets/images', to: 'assets/images'}
