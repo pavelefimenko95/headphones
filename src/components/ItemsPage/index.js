@@ -24,7 +24,7 @@ class ItemsPage extends Component {
                 <div className="items-page__items-wrapper">
                     {
                         (pageTitle === 'наушники' || pageTitle === 'клавиатуры') ? <ComingSoon /> :
-                            this.props.products.productsList
+                            this.props.products.productsList && this.props.products.productsList
                                 .filter(product => product.type === match.params.itemType.toUpperCase())
                                 .map((product, i) =>
                                     <ItemPreview key={i}
