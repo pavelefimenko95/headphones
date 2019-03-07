@@ -3,7 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtendedDefineWebpackPlugin = require('extended-define-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const Visualizer = require('webpack-visualizer-plugin');
 
 module.exports = {
     mode: 'production',
@@ -47,6 +47,9 @@ module.exports = {
         ]
     },
     plugins: [
+        new Visualizer({
+            filename: './statistics.html'
+        }),
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
@@ -57,8 +60,5 @@ module.exports = {
             {from: 'assets/images', to: 'assets/images'}
         ])
     ],
-    optimization: {
-        minimizer: [new UglifyJsPlugin({})]
-    },
     devtool: 'source-map'
 };
