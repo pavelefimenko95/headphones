@@ -60,5 +60,8 @@ module.exports = {
             {from: 'assets/images', to: 'assets/images'}
         ])
     ],
+    optimization: {
+        sideEffects: false
+    },
     devtool: 'source-map'
 };
