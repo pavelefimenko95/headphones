@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtendedDefineWebpackPlugin = require('extended-define-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -54,7 +55,8 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             {from: 'assets/images', to: 'assets/images'}
-        ])
+        ]),
+        new UglifyJsPlugin()
     ],
     devtool: 'source-map',
     devServer: {
