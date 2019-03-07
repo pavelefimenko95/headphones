@@ -6,7 +6,7 @@ const ExtendedDefineWebpackPlugin = require('extended-define-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: ['babel-polyfill', './src/index.js'],
     output: {
         path: path.resolve(__dirname, 'dist'),
