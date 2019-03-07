@@ -34,7 +34,7 @@
     "react-csv": "^1.1.1",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.6.3",
-    "react-icons": "^3.2.2",
+    "react-icons": "^3.5.0",
     "react-loader-spinner": "^2.2.0",
     "react-modal": "^3.8.1",
     "react-redux": "^5.1.1",
@@ -64,6 +64,7 @@
     "redux-devtools-extension": "^2.13.6",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.1.2",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.14"

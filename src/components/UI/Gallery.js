@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import * as _ from 'lodash';
+import get from 'lodash/get';
 import classNames from 'classnames';
 
 class Gallery extends Component {
@@ -26,7 +26,7 @@ class Gallery extends Component {
             <div className="gallery" ref={ el => setRef(el, 'galleryRef')}>
                 <div className="gallery__wrapper">
                     <div className='gallery__wrapper__image'>
-                        <img src={__INTERNAL_API_URL__ + _.get(selectedGallery, `collection[${selectedImageId}]`)} />
+                        <img src={__INTERNAL_API_URL__ + get(selectedGallery, `collection[${selectedImageId}]`)} />
                     </div>
                     <div className="gallery__wrapper__controls">
                         <div className="gallery__wrapper__controls__color">

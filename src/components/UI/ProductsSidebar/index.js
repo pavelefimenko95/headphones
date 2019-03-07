@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
 import ProductsSidebarItem from './ProductsSidebarItem';
 import { Scrollbars } from 'react-custom-scrollbars';
 
