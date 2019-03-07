@@ -55,11 +55,10 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             {from: 'assets/images', to: 'assets/images'}
-        ]),
-        new UglifyJsPlugin()
+        ])
     ],
-    devtool: 'source-map',
-    devServer: {
-        port: process.env.PORT || 4000
-    }
+    optimization: {
+        minimizer: [new UglifyJsPlugin({})]
+    },
+    devtool: 'source-map'
 };
